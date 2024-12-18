@@ -9,8 +9,6 @@ gem "puma", ">= 5.0"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
-gem "rswag-api"
-gem "rswag-ui"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
@@ -40,7 +38,8 @@ gem "thruster", require: false
 # gem "rack-cors"
 
 group :development, :test do
-  gem "rspec-rails"
+  gem 'rspec-rails', '~> 7.1'
+  gem 'rswag', '~> 2.16'
   gem "rswag-specs"
 
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

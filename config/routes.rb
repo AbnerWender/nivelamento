@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  mount Rswag::Ui::Engine => "/api-docs"
-  mount Rswag::Api::Engine => "/api-docs"
+  # Monta as engines do Rswag para a documentação da API
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
+
   resources :beers do
     resources :food_pairings # Para associar food pairings diretamente a beers.
   end
