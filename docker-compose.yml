@@ -9,6 +9,6 @@ services:
       #MYSQL_USER: root
       MYSQL_PASSWORD: abner
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - ./data:/var/lib/mysql
