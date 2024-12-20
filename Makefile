@@ -13,13 +13,14 @@ help:
 	@echo "  make down        - Stop and remove Docker containers."
 	@echo "  make start       - Start Docker containers and the Rails server."
 	@echo "  make stop        - Stop Docker containers and the Rails server."
+	@echo "  make restart     - Restart Rails server."
 	@echo "  make help        - Display this help message."
 	@echo ""
 	@echo "Note: Ensure that Docker is running and that you have the necessary permissions."
 
 .PHONY: build
 build:
-	bundle install	
+	bundle install
 	docker-compose up -d
 	@echo "Docker initializing in the background"
 
@@ -31,7 +32,7 @@ down:
 .PHONY: start
 start:
 	@echo  "----------------------"
-	docker-compose start 
+	docker-compose start
 	@echo "Docker started!"
 	@echo  "----------------------"
 	rails server -d
@@ -48,4 +49,13 @@ stop:
 	@echo "===================="
 	@echo "Docker stopped!"
 	@echo "Rails server stopped!"
+	@echo "===================="
+
+.PHONY: restart
+restart:
+	chmod +x kill.py
+	python3 kill.py
+	rails server -d
+	@echo "===================="
+	@echo "Server restarted!"
 	@echo "===================="

@@ -12,4 +12,9 @@ Rails.application.routes.draw do
   end
 
   resources :food_pairings # Rota independente para food pairings.
+
+	get '/coverage', to: 'coverage#index'
+
 end
+
+

@@ -40,7 +40,7 @@ gem "thruster", require: false
 group :development, :test do
   gem 'rspec-rails', '~> 7.1'
   gem 'rswag', '~> 2.16'
-  gem "rswag-specs"
+
 
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
@@ -53,11 +53,12 @@ group :development, :test do
 end
 group :development do
   gem 'rubocop', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec', require: false
-  gem 'rubocop-rspec_rails', require: false
+  gem 'rubocop-performance', '~> 1.23', require: false
+  gem 'rubocop-rails', '~> 2.27', require: false
+  gem 'rubocop-rspec', '~> 3.3', require: false
+  gem 'rubocop-rspec_rails', '~> 2.30', require: false
 end
 group :test do
   gem "simplecov", require: false
+	gem 'simplecov_json_formatter', '~> 0.1.4', require: false
 end
