@@ -80,7 +80,7 @@ GEM
     bcrypt_pbkdf (1.1.1-arm64-darwin)
     bcrypt_pbkdf (1.1.1-x86_64-darwin)
     benchmark (0.4.0)
-    bigdecimal (3.1.8)
+    bigdecimal (3.1.9)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
     brakeman (6.2.2)
@@ -272,7 +272,7 @@ GEM
     rubocop-performance (1.23.0)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
-    rubocop-rails (2.27.0)
+    rubocop-rails (2.28.0)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.52.0, < 2.0)
@@ -360,7 +360,7 @@ DEPENDENCIES
   rswag (~> 2.16)
   rubocop
   rubocop-performance (~> 1.23)
-  rubocop-rails (~> 2.27)
+  rubocop-rails (~> 2.28)
   rubocop-rspec (~> 3.3)
   rubocop-rspec_rails (~> 2.30)
   simplecov
